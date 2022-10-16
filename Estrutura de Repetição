@@ -1,0 +1,88 @@
+#Exercicio1 
+nota = float(input("Digite uma nota de 1 a 10:"))
+
+while (nota <1 or nota>10):
+  print("Digite uma nota válida! ")
+  nota = float(input("Digite uma nota de 1 a 10:"))
+if (nota >=1 or nota <=10):
+  print("Nota registrada!")
+
+
+#Exercicio2
+usuario = input("Digite seu usuário:")
+senha = input("Digite sua senha:")
+while (usuario == senha):
+  print("Usuário e senha não podem ser iguais! /n Digite novamente")
+  usuario = input("Digite seu usuário:")
+  senha = input("Digite sua senha:")
+if (usuario != senha):
+  print("Aceito!")
+
+
+
+#Exercicio4
+A = 80000
+B = 200000
+ano = 0
+while A <= B:
+  A = A + (A * 0.03)
+  B = B + (B * 0.015)
+  ano += 1
+
+print ("O pais A, ultrapassa ou igula a B. Em %d anos" %ano)
+
+
+#Exercicio9 
+num = 0 
+
+for num in range (1,51):
+  if (num %2 != 0):
+    print (num)
+  num +1
+
+
+#Exercicio33 
+import math
+from math import inf
+
+#O math.inf retorna um infinito positivo de ponto flutuante
+
+maior = -inf
+menor = inf
+cont = 0
+soma = 0
+
+
+while True:
+  temp = float(input("Digite a tempetura: \n Digite (0) para sair"))
+  if (temp == 0):
+    break
+  if temp < menor:
+      menor = temp
+      soma += temp
+      cont += 1
+  if temp > maior:
+        maior = temp
+        soma += temp
+        cont += 1
+print("A menor temperatura foi %d" %menor)
+print("A maior temperatura foi %d" %maior)
+print(f"A média das temperaturas foi {soma / cont:.2f}")
+
+
+#Exercicio43
+valortotal= 0
+while True:
+  codpedido = int(input("Informe o código do item desejado: \n Quando encerrar a lista do pedido. Digite (0)\n"))
+  if (codpedido == 0):
+    break
+  if (codpedido == 100 or codpedido == 103):
+    valortotal+=1.20
+  if (codpedido == 101 or codpedido == 104):
+    valortotal+=1.30
+  if (codpedido == 102):
+    valortotal+=1.50
+  if (codpedido == 105):
+    valortotal+=1.00
+    
+print(f"O valor total de seu pedido é R${valortotal:.2f}")
